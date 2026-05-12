@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TechHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <div class="nav-logo-box">TH</div>
+                TechHaven
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-icons-item">
+                    <a href="dashboard.html" class="nav-dashboard-link">Dashboard</a>
+                    <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+                    <a href="login.html" aria-label="User Account"><i class="far fa-user"></i></a>
+                    <a href="cart.html" aria-label="Shopping Cart"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page" id="main-content">
+        <section class="checkout-hero">
+            <h1>Checkout</h1>
+            <p>Complete your order securely.</p>
+        </section>
+
+        <div class="checkout-steps">
+            <div class="checkout-step">
+                <div class="checkout-step-num checkout-step-num-active">1</div>
+                <span class="checkout-step-label-active">Cart</span>
+            </div>
+            <div class="checkout-step-line"><div class="checkout-step-line-active"></div></div>
+            <div class="checkout-step">
+                <div class="checkout-step-num checkout-step-num-active">2</div>
+                <span class="checkout-step-label-active">Checkout</span>
+            </div>
+            <div class="checkout-step-line"><div class="checkout-step-line-inactive"></div></div>
+            <div class="checkout-step">
+                <div class="checkout-step-num checkout-step-num-inactive">3</div>
+                <span class="checkout-step-label-inactive">Confirmation</span>
+            </div>
+        </div>
+
+        <section class="checkout-layout">
+            <div>
+                <form id="checkout-form">
+                    <div class="checkout-form-card">
+                        <div class="section-title"><i class="fas fa-map-marker-alt"></i> Billing Details</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Name <span class="checkout-optional">(Optional)</span></label>
+                            <input type="text" placeholder="Your company">
+                        </div>
+                        <div class="form-group">
+                            <label>Street Address *</label>
+                            <input type="text" placeholder="House number and street name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Town / City *</label>
+                                <input type="text" placeholder="New York" required>
+                            </div>
+                            <div class="form-group">
+                                <label>ZIP Code *</label>
+                                <input type="text" placeholder="10001" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone *</label>
+                                <input type="tel" placeholder="+1 (555) 000-0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-form-card">
+                        <div class="section-title"><i class="fas fa-credit-card"></i> Payment Method</div>
+                        <div class="payment-option">
+                            <label>
+                                <input type="radio" name="payment" value="credit" checked>
+                                <i class="fas fa-credit-card"></i> Credit / Debit Card
+                                <span class="payment-icons">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                </span>
+                            </label>
+                            <div id="credit-card-fields">
+                                <div class="form-group">
+                                    <label>Card Number</label>
+                                    <input type="text" class="cc-input" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Expiry Date</label>
+                                        <input type="text" class="cc-input" placeholder="MM / YY" maxlength="7" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CVC</label>
+                                        <input type="text" class="cc-input" placeholder="123" maxlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-option">
+                            <label>
+                                <input type="radio" name="payment" value="paypal">
+                                <i class="fab fa-paypal"></i> PayPal
+                                <span class="payment-icons"><i class="fab fa-cc-paypal"></i></span>
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <label>
+                                <input type="radio" name="payment" value="cod">
+                                <i class="fas fa-money-bill-wave"></i> Cash on Delivery
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="order-summary-card">
+                <div class="order-summary-header-bar">
+                    <i class="fas fa-shopping-bag"></i> Your Order
+                </div>
+                <div class="order-items-list" id="checkout-order-items"></div>
+                <div class="order-totals-section">
+                    <div class="totals-row"><span>Subtotal</span><span id="co-subtotal">$0.00</span></div>
+                    <div class="totals-row free"><span>Shipping</span><span>Free</span></div>
+                    <div class="totals-row"><span>Tax (8%)</span><span id="co-tax">$0.00</span></div>
+                    <div class="totals-total"><span>Total</span><span id="co-total">$0.00</span></div>
+                </div>
+                <div class="order-place-section">
+                    <button type="submit" form="checkout-form" class="btn-primary-lg checkout-place-btn">
+                        <i class="fas fa-lock"></i> Place Order
+                    </button>
+                </div>
+                <div class="order-secure-row">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                    <span class="order-ssl-badge"><i class="icon-fa-ssl"></i>SSL Secured</span>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a href="../index.html" class="footer-logo-link">
+                    <div class="nav-logo-box">TH</div>
+                    TechHaven
+                </a>
+                <p>Your ultimate destination for the latest and greatest in consumer electronics.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div>
+                <h4>Categories</h4>
+                <a href="shop.html">Laptops & Computers</a>
+                <a href="shop.html">Smartphones & Tablets</a>
+                <a href="shop.html">Audio & Headphones</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p class="footer-copyright">&copy; 2026 TechHaven Electronics. All rights reserved.</p>
+            <div class="footer-payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TechHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <div class="nav-logo-box">TH</div>
+                TechHaven
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-icons-item">
+                    <a href="dashboard.html" class="nav-dashboard-link">Dashboard</a>
+                    <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+                    <a href="login.html" aria-label="User Account"><i class="far fa-user"></i></a>
+                    <a href="cart.html" aria-label="Shopping Cart"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="cart-hero">
+            <h1>Your Cart</h1>
+            <p>Review your items before checkout.</p>
+        </section>
+
+        <section class="cart-layout">
+            <div>
+                <div class="cart-header-row">
+                    <h3>Cart Items <span id="item-count" class="cart-item-count"></span></h3>
+                    <button id="clear-cart-btn" class="cart-clear-btn hidden-btn">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+                <div id="cart-items-container" class="cart-items-box"></div>
+                <div class="cart-continue-row">
+                    <a href="shop.html" class="btn border-button">
+                        <i class="fas fa-arrow-left"></i> Continue Shopping
+                    </a>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <h3 class="summary-title">Order Summary</h3>
+                <p class="summary-subtitle">Prices include applicable taxes</p>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span class="summary-shipping">Free</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (8%)</span>
+                    <span id="summary-tax">$0.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+                <a href="checkout.html" id="checkout-btn" class="btn-checkout">
+                    Proceed to Checkout <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="summary-payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+                <p class="summary-secure-note">
+                    <i class="fas fa-lock"></i> Secure checkout
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a href="../index.html" class="footer-logo-link">
+                    <div class="nav-logo-box">TH</div>
+                    TechHaven
+                </a>
+                <p>Your ultimate destination for the latest and greatest in consumer electronics.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div>
+                <h4>Categories</h4>
+                <a href="shop.html">Laptops & Computers</a>
+                <a href="shop.html">Smartphones & Tablets</a>
+                <a href="shop.html">Audio & Headphones</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p class="footer-copyright">&copy; 2026 TechHaven Electronics. All rights reserved.</p>
+            <div class="footer-payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
+
+
+
+
+

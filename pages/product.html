@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wireless Headphones - TechHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <div class="nav-logo-box">TH</div>
+                TechHaven
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-icons-item">
+                    <a href="dashboard.html" class="nav-dashboard-link">Dashboard</a>
+                    <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+                    <a href="login.html" aria-label="User Account"><i class="far fa-user"></i></a>
+                    <a href="cart.html" aria-label="Shopping Cart"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <div class="product-breadcrumb">
+            <a href="../index.html">Home</a> /
+            <a href="shop.html">Audio</a> /
+            <span class="product-breadcrumb-current">Premium Wireless Headphones</span>
+        </div>
+
+        <section>
+            <div class="card product-layout">
+                <div class="product-gallery-col">
+                    <div class="product-main-img-box">
+                        <img src="../Sources/audio/Product1.jpg" alt="Premium Wireless Headphones" class="product-main-img">
+                    </div>
+                    <div class="product-thumbs">
+                        <div class="product-thumb product-thumb-active">
+                            <img src="../Sources/audio/Product1.jpg" alt="View 1" class="product-thumb-img">
+                        </div>
+                        <div class="product-thumb">
+                            <img src="../Sources/audio/Product2.jpg" alt="View 2" class="product-thumb-img-dim">
+                        </div>
+                        <div class="product-thumb">
+                            <img src="../Sources/audio/Product3.jpg" alt="View 3" class="product-thumb-img-dim">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info-col">
+                    <div>
+                        <h1>Premium Wireless Headphones</h1>
+                        <div class="product-rating-row">
+                            <div class="product-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="product-review-count">(124 Reviews)</span>
+                        </div>
+                        <p class="product-price">$349.99</p>
+                    </div>
+
+                    <p>Industry-leading noise cancellation, exceptional sound quality, and up to 30 hours of battery life. These headphones are designed for the ultimate listening experience.</p>
+
+                    <div class="product-features">
+                        <ul class="product-feature-list">
+                            <li><i class="icon-check-green"></i> Advanced Noise Cancellation</li>
+                            <li><i class="icon-check-green"></i> Hi-Res Audio Compatible</li>
+                            <li><i class="icon-check-green"></i> Built-in Alexa &amp; Google Assistant</li>
+                            <li><i class="icon-check-green"></i> Touch Controls</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-qty-row">
+                        <div class="product-qty-box">
+                            <button class="btn-qty-left">-</button>
+                            <input type="number" value="1" min="1" class="product-qty-input" id="qty-input">
+                            <button class="btn-qty-right">+</button>
+                        </div>
+                        <button class="btn-add-to-cart" id="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Product Details</h2>
+            <div class="card product-details-card">
+                <div class="product-desc-col">
+                    <h3>Description</h3>
+                    <p>Experience your music like never before. With two processors controlling eight microphones, our Auto NC Optimizer automatically optimizes noise canceling based on your wearing conditions and environment.</p>
+                    <p>With up to 30 hours of battery life, you'll have enough power for long trips. And if you need to top up in a hurry, you can get 3 hours' worth of charge after just 3 minutes.</p>
+                </div>
+                <div class="product-spec-col">
+                    <h3>Specifications</h3>
+                    <div class="product-spec-list">
+                        <div class="product-spec-row">
+                            <span class="product-spec-label">Weight</span>
+                            <span class="product-spec-value">250g</span>
+                        </div>
+                        <div class="product-spec-row">
+                            <span class="product-spec-label">Battery Life</span>
+                            <span class="product-spec-value">Up to 30 Hours</span>
+                        </div>
+                        <div class="product-spec-row">
+                            <span class="product-spec-label">Bluetooth</span>
+                            <span class="product-spec-value">Version 5.2</span>
+                        </div>
+                        <div class="product-spec-row">
+                            <span class="product-spec-label">Charging Time</span>
+                            <span class="product-spec-value">Approx. 3.5 Hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a href="../index.html" class="footer-logo-link">
+                    <div class="nav-logo-box">TH</div>
+                    TechHaven
+                </a>
+                <p>Your ultimate destination for the latest and greatest in consumer electronics.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div>
+                <h4>Categories</h4>
+                <a href="shop.html">Laptops & Computers</a>
+                <a href="shop.html">Smartphones & Tablets</a>
+                <a href="shop.html">Audio & Headphones</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p class="footer-copyright">&copy; 2026 TechHaven Electronics. All rights reserved.</p>
+            <div class="footer-payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
+
+
+
+
+

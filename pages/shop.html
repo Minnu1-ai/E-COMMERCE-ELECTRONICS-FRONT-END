@@ -1,0 +1,846 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - TechHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <div class="nav-logo-box">TH</div>
+                TechHaven
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-icons-item">
+                    <a href="dashboard.html" class="nav-dashboard-link">Dashboard</a>
+                    <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+                    <a href="login.html" aria-label="User Account"><i class="far fa-user"></i></a>
+                    <a href="cart.html" aria-label="Shopping Cart"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="shop-hero">
+            <h1>Our Products</h1>
+            <p>Explore the best tech on the market.</p>
+        </section>
+
+        <section class="shop-layout">
+            <!-- Sidebar -->
+            <aside class="shop-sidebar-card">
+                <h3>Filters</h3>
+
+                <div class="shop-filter-section">
+                    <h4>Categories</h4>
+                    <label class="shop-filter-label">
+                        <input type="radio" name="category" value="All Products" checked class="shop-filter-radio"> All Products
+                    </label>
+                    <label class="shop-filter-label">
+                        <input type="radio" name="category" value="Laptops & PCs" class="shop-filter-radio"> Laptops &amp; PCs
+                    </label>
+                    <label class="shop-filter-label">
+                        <input type="radio" name="category" value="Smartphones" class="shop-filter-radio"> Smartphones
+                    </label>
+                    <label class="shop-filter-label">
+                        <input type="radio" name="category" value="Audio" class="shop-filter-radio"> Audio
+                    </label>
+                    <label class="shop-filter-label">
+                        <input type="radio" name="category" value="Wearables" class="shop-filter-radio"> Wearables
+                    </label>
+                    <label class="shop-filter-label">
+                        <input type="radio" name="category" value="Cameras" class="shop-filter-radio"> Cameras
+                    </label>
+                </div>
+
+                <div class="shop-filter-section">
+                    <h4>Price Range</h4>
+                    <div class="shop-price-row">
+                        <input type="number" id="min-price" placeholder="Min" class="shop-price-input">
+                        <span>-</span>
+                        <input type="number" id="max-price" placeholder="Max" class="shop-price-input">
+                    </div>
+                </div>
+
+                <button id="apply-filters-btn" class="btn border-button">Apply Filters</button>
+            </aside>
+
+            <!-- Main Shop Content -->
+            <div>
+                <div class="shop-results-bar">
+                    <p id="result-count" class="shop-result-count">Showing 65 results</p>
+                    <select class="shop-sort-select" id="sort-select">
+                        <option value="default">Default Sorting</option>
+                        <option value="popularity">Sort by Popularity</option>
+                        <option value="rating">Sort by Average Rating</option>
+                        <option value="latest">Sort by Latest</option>
+                        <option value="price-asc">Sort by Price: Low to High</option>
+                        <option value="price-desc">Sort by Price: High to Low</option>
+                    </select>
+                </div>
+
+                <div class="card-container shop-grid">
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product1.jpg" alt="Apple Elite 14">
+                        </a>
+                        <div class="card-body"><a href="product.html">Apple Elite 14</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$1,663.85</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product2.jpg" alt="MSI Premium 70">
+                        </a>
+                        <div class="card-body"><a href="product.html">MSI Premium 70</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$938.84</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product3.jpg" alt="Asus Advanced 98">
+                        </a>
+                        <div class="card-body"><a href="product.html">Asus Advanced 98</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$1,026.02</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product4.jpg" alt="Asus Lite 31">
+                        </a>
+                        <div class="card-body"><a href="product.html">Asus Lite 31</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$1,960.94</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/product5.jpeg" alt="Acer Mini 75">
+                        </a>
+                        <div class="card-body"><a href="product.html">Acer Mini 75</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$161.93</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product6.jpg" alt="Razer Elite 48">
+                        </a>
+                        <div class="card-body"><a href="product.html">Razer Elite 48</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$2,815.55</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product7.jpg" alt="Acer Advanced 62">
+                        </a>
+                        <div class="card-body"><a href="product.html">Acer Advanced 62</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$540.65</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product8.jpg" alt="MSI Lite 84">
+                        </a>
+                        <div class="card-body"><a href="product.html">MSI Lite 84</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$1,909.42</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product9.jpg" alt="Dell Mini 82">
+                        </a>
+                        <div class="card-body"><a href="product.html">Dell Mini 82</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$349.16</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product10.jpg" alt="HP Air 53">
+                        </a>
+                        <div class="card-body"><a href="product.html">HP Air 53</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$2,226.16</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product11.jpg" alt="MSI Max 41">
+                        </a>
+                        <div class="card-body"><a href="product.html">MSI Max 41</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$2,525.47</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product12.jpg" alt="Razer Air 88">
+                        </a>
+                        <div class="card-body"><a href="product.html">Razer Air 88</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$1,837.83</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Laptops & PCs">
+                        <a href="product.html">
+                            <img src="../Sources/laptops/Product13.jpg" alt="HP Air 10">
+                        </a>
+                        <div class="card-body"><a href="product.html">HP Air 10</a>
+                        <span class="category-tag">Laptops & PCs</span>
+                        <div class="price-row">
+                            <span class="price">$2,898.79</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product1.jpg" alt="Oppo Elite 19">
+                        </a>
+                        <div class="card-body"><a href="product.html">Oppo Elite 19</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$981.51</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product2.jpg" alt="Apple Max 93">
+                        </a>
+                        <div class="card-body"><a href="product.html">Apple Max 93</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$2,935.31</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product3.jpg" alt="Sony Air 86">
+                        </a>
+                        <div class="card-body"><a href="product.html">Sony Air 86</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$1,593.86</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product4.jpg" alt="Google Max 38">
+                        </a>
+                        <div class="card-body"><a href="product.html">Google Max 38</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$2,912.02</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product5.jpg" alt="OnePlus Mini 93">
+                        </a>
+                        <div class="card-body"><a href="product.html">OnePlus Mini 93</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$1,009.82</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product6.jpg" alt="Google Elite 12">
+                        </a>
+                        <div class="card-body"><a href="product.html">Google Elite 12</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$1,254.22</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product7.jpg" alt="Xiaomi Ultra 15">
+                        </a>
+                        <div class="card-body"><a href="product.html">Xiaomi Ultra 15</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$2,794.88</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product8.jpg" alt="Sony Max 14">
+                        </a>
+                        <div class="card-body"><a href="product.html">Sony Max 14</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$734.05</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product9.jpg" alt="Vivo Ultra 61">
+                        </a>
+                        <div class="card-body"><a href="product.html">Vivo Ultra 61</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$1,644.95</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product10.jpg" alt="Xiaomi Max 16">
+                        </a>
+                        <div class="card-body"><a href="product.html">Xiaomi Max 16</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$1,851.71</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product11.jpg" alt="Xiaomi Pro 28">
+                        </a>
+                        <div class="card-body"><a href="product.html">Xiaomi Pro 28</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$2,813.73</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product12.jpg" alt="Sony Max 13">
+                        </a>
+                        <div class="card-body"><a href="product.html">Sony Max 13</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$1,992.27</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Smartphones">
+                        <a href="product.html">
+                            <img src="../Sources/smartphones/Product13.jpg" alt="Xiaomi Premium 80">
+                        </a>
+                        <div class="card-body"><a href="product.html">Xiaomi Premium 80</a>
+                        <span class="category-tag">Smartphones</span>
+                        <div class="price-row">
+                            <span class="price">$1,344.28</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product1.jpg" alt="Jabra Mini 20">
+                        </a>
+                        <div class="card-body"><a href="product.html">Jabra Mini 20</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,589.01</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product2.jpg" alt="Apple Max 63">
+                        </a>
+                        <div class="card-body"><a href="product.html">Apple Max 63</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,503.12</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product3.jpg" alt="Beats Lite 30">
+                        </a>
+                        <div class="card-body"><a href="product.html">Beats Lite 30</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,652.18</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product4.jpg" alt="Skullcandy Pro 83">
+                        </a>
+                        <div class="card-body"><a href="product.html">Skullcandy Pro 83</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,867.33</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product5.jpg" alt="Sennheiser Lite 20">
+                        </a>
+                        <div class="card-body"><a href="product.html">Sennheiser Lite 20</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,835.78</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product6.jpg" alt="Sony Ultra 69">
+                        </a>
+                        <div class="card-body"><a href="product.html">Sony Ultra 69</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,605.36</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product7.jpg" alt="Sennheiser Pro 75">
+                        </a>
+                        <div class="card-body"><a href="product.html">Sennheiser Pro 75</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$867.18</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product8.jpg" alt="Bose Pro 78">
+                        </a>
+                        <div class="card-body"><a href="product.html">Bose Pro 78</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$2,800.25</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product9.jpg" alt="Skullcandy Max 88">
+                        </a>
+                        <div class="card-body"><a href="product.html">Skullcandy Max 88</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,442.36</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product10.jpg" alt="Apple Premium 16">
+                        </a>
+                        <div class="card-body"><a href="product.html">Apple Premium 16</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,629.96</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product11.jpg" alt="JBL Advanced 96">
+                        </a>
+                        <div class="card-body"><a href="product.html">JBL Advanced 96</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,201.56</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product12.jpg" alt="Sennheiser Plus 44">
+                        </a>
+                        <div class="card-body"><a href="product.html">Sennheiser Plus 44</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,777.64</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Audio">
+                        <a href="product.html">
+                            <img src="../Sources/audio/Product13.jpg" alt="Jabra Lite 47">
+                        </a>
+                        <div class="card-body"><a href="product.html">Jabra Lite 47</a>
+                        <span class="category-tag">Audio</span>
+                        <div class="price-row">
+                            <span class="price">$1,473.50</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product1.jpg" alt="Samsung Ultra 79">
+                        </a>
+                        <div class="card-body"><a href="product.html">Samsung Ultra 79</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$2,902.87</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product2.jpg" alt="Fossil Air 71">
+                        </a>
+                        <div class="card-body"><a href="product.html">Fossil Air 71</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$769.69</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product3.jpg" alt="Garmin Max 85">
+                        </a>
+                        <div class="card-body"><a href="product.html">Garmin Max 85</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$273.81</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product4.jpg" alt="Amazfit Air 39">
+                        </a>
+                        <div class="card-body"><a href="product.html">Amazfit Air 39</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$1,195.78</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product5.jpg" alt="Apple Lite 51">
+                        </a>
+                        <div class="card-body"><a href="product.html">Apple Lite 51</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$307.50</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product6.jpg" alt="Apple Ultra 30">
+                        </a>
+                        <div class="card-body"><a href="product.html">Apple Ultra 30</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$2,737.30</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product7.jpg" alt="Fitbit Mini 75">
+                        </a>
+                        <div class="card-body"><a href="product.html">Fitbit Mini 75</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$2,798.77</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product8.jpg" alt="Amazfit Ultra 93">
+                        </a>
+                        <div class="card-body"><a href="product.html">Amazfit Ultra 93</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$893.90</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product9.jpg" alt="Amazfit Max 63">
+                        </a>
+                        <div class="card-body"><a href="product.html">Amazfit Max 63</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$846.57</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product10.jpg" alt="Huawei Air 23">
+                        </a>
+                        <div class="card-body"><a href="product.html">Huawei Air 23</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$981.71</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product11.jpg" alt="Samsung Ultra 98">
+                        </a>
+                        <div class="card-body"><a href="product.html">Samsung Ultra 98</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$998.32</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product12.jpg" alt="Amazfit Air 63">
+                        </a>
+                        <div class="card-body"><a href="product.html">Amazfit Air 63</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$2,145.21</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Wearables">
+                        <a href="product.html">
+                            <img src="../Sources/wearables/Product13.jpg" alt="Samsung Air 70">
+                        </a>
+                        <div class="card-body"><a href="product.html">Samsung Air 70</a>
+                        <span class="category-tag">Wearables</span>
+                        <div class="price-row">
+                            <span class="price">$1,886.36</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product1.jpg" alt="Panasonic Max 77">
+                        </a>
+                        <div class="card-body"><a href="product.html">Panasonic Max 77</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$2,540.02</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product2.jpg" alt="Nikon Elite 38">
+                        </a>
+                        <div class="card-body"><a href="product.html">Nikon Elite 38</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$104.53</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product3.jpg" alt="Leica Lite 73">
+                        </a>
+                        <div class="card-body"><a href="product.html">Leica Lite 73</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$895.07</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product4.jpg" alt="Panasonic Advanced 93">
+                        </a>
+                        <div class="card-body"><a href="product.html">Panasonic Advanced 93</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$936.70</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product5.jpg" alt="Fujifilm Max 73">
+                        </a>
+                        <div class="card-body"><a href="product.html">Fujifilm Max 73</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$2,984.54</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product6.jpg" alt="Fujifilm Advanced 63">
+                        </a>
+                        <div class="card-body"><a href="product.html">Fujifilm Advanced 63</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$764.02</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product7.jpg" alt="Panasonic Air 15">
+                        </a>
+                        <div class="card-body"><a href="product.html">Panasonic Air 15</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$2,754.13</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product8.jpg" alt="Fujifilm Pro 12">
+                        </a>
+                        <div class="card-body"><a href="product.html">Fujifilm Pro 12</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$1,229.05</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product9.jpg" alt="Leica Elite 85">
+                        </a>
+                        <div class="card-body"><a href="product.html">Leica Elite 85</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$2,956.55</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product10.jpg" alt="Olympus Ultra 71">
+                        </a>
+                        <div class="card-body"><a href="product.html">Olympus Ultra 71</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$2,254.78</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product11.jpg" alt="Fujifilm Lite 29">
+                        </a>
+                        <div class="card-body"><a href="product.html">Fujifilm Lite 29</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$1,545.56</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product12.jpg" alt="Olympus Max 76">
+                        </a>
+                        <div class="card-body"><a href="product.html">Olympus Max 76</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$861.70</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                    <article class="card" data-category="Cameras">
+                        <a href="product.html">
+                            <img src="../Sources/cameras/Product13.jpg" alt="Olympus Mini 19">
+                        </a>
+                        <div class="card-body"><a href="product.html">Olympus Mini 19</a>
+                        <span class="category-tag">Cameras</span>
+                        <div class="price-row">
+                            <span class="price">$1,170.54</span>
+                            <button class="btn add-btn" aria-label="Add to cart"><i class="fas fa-plus"></i></button></div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="shop-pagination">
+                    <button class="btn-tiny-active">1</button>
+                    <button class="btn-tiny-outline">2</button>
+                    <button class="btn-tiny-outline">3</button>
+                    <button class="btn-tiny-outline"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a href="../index.html" class="footer-logo-link"><div class="nav-logo-box">TH</div>TechHaven</a>
+                <p>Your ultimate destination for the latest and greatest in consumer electronics.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div>
+                <h4>Categories</h4>
+                <a href="shop.html">Laptops & Computers</a>
+                <a href="shop.html">Smartphones & Tablets</a>
+                <a href="shop.html">Audio & Headphones</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p class="footer-copyright">&copy; 2026 TechHaven Electronics. All rights reserved.</p>
+            <div class="footer-payment-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div>
+        </div>
+    </footer>
+<script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

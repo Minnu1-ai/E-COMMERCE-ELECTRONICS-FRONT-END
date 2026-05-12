@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin � TechHaven</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../cssFile/globalStyles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="admin-page">
+
+<!-- 
+     AUTH VIEWS (Login / Register) � shown when logged out
+ -->
+<div id="view-login" class="hidden-btn">
+  <div class="auth-left">
+    <div class="auth-left-content">
+      <div class="auth-logo-row">
+        <div class="auth-logo-box">TH</div>
+        <span class="auth-logo-text">TechHaven</span>
+      </div>
+      <h1 class="auth-left-heading">Manage your store with confidence</h1>
+      <p class="auth-left-sub">Full control over inventory, orders, and store performance.</p>
+      <ul class="auth-features">
+        <li><div class="auth-feature-icon"><i class="fas fa-chart-line"></i></div> Real-time inventory analytics</li>
+        <li><div class="auth-feature-icon"><i class="fas fa-boxes"></i></div> Full stock CRUD management</li>
+        <li><div class="auth-feature-icon"><i class="fas fa-shield-alt"></i></div> Secure session-based access</li>
+        <li><div class="auth-feature-icon"><i class="fas fa-bell"></i></div> Low stock alerts</li>
+      </ul>
+    </div>
+  </div>
+  <div class="auth-right">
+    <h2 class="auth-right-heading">Sign in</h2>
+    <p class="auth-right-sub">Enter your credentials to access the admin panel</p>
+    <div class="auth-error-banner" id="login-error">
+      <i class="fas fa-exclamation-circle"></i><span>Invalid email or password</span>
+    </div>
+    <form id="login-form" novalidate>
+      <div class="auth-form-group">
+        <label for="login-email">Email address</label>
+        <div class="auth-input-wrap">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="login-email" placeholder="admin@techhaven.com" autocomplete="email">
+        </div>
+        <div class="auth-field-error" id="login-email-error"><i class="fas fa-circle-exclamation"></i><span></span></div>
+      </div>
+      <div class="auth-form-group">
+        <label for="login-password">Password</label>
+        <div class="auth-input-wrap">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="login-password" placeholder="" autocomplete="current-password">
+        </div>
+        <div class="auth-field-error" id="login-password-error"><i class="fas fa-circle-exclamation"></i><span></span></div>
+      </div>
+      <div class="auth-remember-row">
+        <label class="auth-remember-label">
+          <input type="checkbox" id="remember-me"> Remember me for 7 days
+        </label>
+      </div>
+      <button type="submit" class="auth-submit-btn"><i class="fas fa-sign-in-alt"></i> Sign In to Dashboard</button>
+    </form>
+    <div class="auth-divider">or</div>
+    <div class="auth-footer-link">No account? <a href="#" id="go-register">Create one here</a></div>
+    <div class="auth-footer-link"><a href="../index.html"> Back to store</a></div>
+  </div>
+</div>
+
+<!-- Register View -->
+<div id="view-register" class="auth-page hidden-btn">
+  <div class="auth-left">
+    <div class="auth-left-content">
+      <div class="auth-logo-row">
+        <div class="auth-logo-box">TH</div>
+        <span class="auth-logo-text">TechHaven</span>
+      </div>
+      <h1 class="auth-left-heading">Get started in minutes</h1>
+      <p class="auth-left-sub">Create your admin account and take full control.</p>
+      <ul class="auth-steps">
+        <li><div class="step-num">1</div><div class="step-text"><strong>Create your account</strong><span>Fill in your details</span></div></li>
+        <li><div class="step-num">2</div><div class="step-text"><strong>Sign in securely</strong><span>Use your credentials</span></div></li>
+        <li><div class="step-num">3</div><div class="step-text"><strong>Manage inventory</strong><span>Add, edit, track products</span></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="auth-right">
+    <h2 class="auth-right-heading">Create account</h2>
+    <p class="auth-right-sub">Register to access the TechHaven admin panel</p>
+    <form id="register-form" novalidate>
+      <div class="auth-form-group">
+        <label for="reg-username">Full Name</label>
+        <div class="auth-input-wrap">
+          <i class="fas fa-user"></i>
+          <input type="text" id="reg-username" placeholder="John Doe" autocomplete="name">
+        </div>
+        <div class="auth-field-error" id="reg-username-error"><i class="fas fa-circle-exclamation"></i><span></span></div>
+      </div>
+      <div class="auth-form-group">
+        <label for="reg-email">Email address</label>
+        <div class="auth-input-wrap">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="reg-email" placeholder="admin@techhaven.com" autocomplete="email">
+        </div>
+        <div class="auth-field-error" id="reg-email-error"><i class="fas fa-circle-exclamation"></i><span></span></div>
+      </div>
+      <div class="auth-form-group">
+        <label for="reg-password">Password</label>
+        <div class="auth-input-wrap">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="reg-password" placeholder="Min. 8 characters" autocomplete="new-password">
+        </div>
+        <div class="auth-field-error" id="reg-password-error"><i class="fas fa-circle-exclamation"></i><span></span></div>
+        <p class="auth-password-hint">Must be at least 8 characters</p>
+      </div>
+      <div class="auth-form-group">
+        <label for="reg-confirm">Confirm Password</label>
+        <div class="auth-input-wrap">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="reg-confirm" placeholder="Repeat your password" autocomplete="new-password">
+        </div>
+        <div class="auth-field-error" id="reg-confirm-error"><i class="fas fa-circle-exclamation"></i><span></span></div>
+      </div>
+      <button type="submit" class="auth-submit-btn"><i class="fas fa-user-plus"></i> Create Admin Account</button>
+    </form>
+    <div class="auth-footer-link">Already have an account? <a href="#" id="go-login">Sign in here</a></div>
+    <div class="auth-footer-link"><a href="../index.html"> Back to store</a></div>
+  </div>
+</div>
+
+<!-- ADMIN SHELL — always visible, no login required -->
+<div id="view-admin">
+  <div class="sidebar-overlay" id="adm-overlay"></div>
+  <div class="admin-wrap">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="adm-sidebar" aria-label="Admin navigation">
+      <div class="admin-sidebar-header">
+        <div class="admin-logo">TH</div>
+        <div>
+          <p class="admin-brand-name">TechHaven</p>
+          <p class="admin-brand-sub">Admin Panel</p>
+        </div>
+      </div>
+      <nav>
+        <span class="sidebar-section-label">Main</span>
+        <a href="#" class="active" data-view="home"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <span class="sidebar-section-label">Inventory</span>
+        <a href="#" data-view="stock"><i class="fas fa-boxes"></i> All Products</a>
+        <a href="#" data-view="stock-form"><i class="fas fa-plus-circle"></i> Add Product</a>
+        <span class="sidebar-section-label">Store</span>
+        <a href="#" data-view="cart"><i class="fas fa-shopping-cart"></i> Cart View</a>
+        <a href="shop.html"><i class="fas fa-store"></i> Visit Store</a>
+        <a href="../index.html"><i class="fas fa-home"></i> Homepage</a>
+      </nav>
+      <div class="admin-sidebar-footer">
+        <button id="logout-btn" class="admin-logout-btn"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div class="admin-topbar-left">
+          <button class="sidebar-toggle" id="adm-menu-toggle" aria-label="Toggle sidebar"><i class="fas fa-bars"></i></button>
+          <h2 class="admin-topbar-title" id="adm-page-title">Dashboard</h2>
+        </div>
+        <div class="admin-topbar-right">
+          <a href="shop.html" class="topbar-icon-btn" title="Visit Store"><i class="fas fa-store"></i></a>
+          <div class="topbar-user-pill">
+            <div class="topbar-avatar" id="adm-avatar">A</div>
+            <span class="topbar-username" id="adm-uname">Admin</span>
+          </div>
+          <button id="logout-top" class="topbar-logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+      </div>
+
+      <div class="admin-content">
+
+        <!--  HOME VIEW  -->
+        <div id="adm-home" class="adm-view">
+          <!-- Welcome Banner -->
+          <div class="admin-welcome-banner">
+            <div>
+              <h2>Welcome back, <span id="welcome-name">Admin</span></h2>
+              <p>Here is what is happening with your inventory today.</p>
+            </div>
+            <a href="#" class="admin-welcome-btn" data-view="stock-form"><i class="fas fa-plus"></i> Add New Product</a>
+          </div>
+
+          <!-- KPI Cards -->
+          <div class="kpi-grid" id="kpi-grid"></div>
+
+          <!-- Charts -->
+          <div class="charts-grid">
+            <div class="chart-card">
+              <div class="chart-card-header">
+                <h3 class="chart-card-title"><i class="icon-fa-chart-bar"></i> Products by Category</h3>
+              </div>
+              <canvas id="bar-chart" aria-label="Products per category"></canvas>
+              <table class="visually-hidden" aria-label="Products per category data">
+                <thead><tr><th>Category</th><th>Count</th></tr></thead>
+                <tbody id="bar-chart-body"></tbody>
+              </table>
+            </div>
+            <div class="chart-card">
+              <div class="chart-card-header">
+                <h3 class="chart-card-title"><i class="icon-fa-chart-pie"></i> Stock Distribution</h3>
+              </div>
+              <canvas id="doughnut-chart" aria-label="Stock units per category"></canvas>
+              <table class="visually-hidden" aria-label="Stock units per category data">
+                <thead><tr><th>Category</th><th>Units</th></tr></thead>
+                <tbody id="doughnut-chart-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="section-header">
+            <h3 class="section-title"><i class="icon-fa-bolt"></i> Quick Actions</h3>
+          </div>
+          <div class="quick-actions-grid">
+            <a href="#" class="quick-action-card" data-view="stock"><i class="fas fa-boxes"></i><span>View All Stock</span></a>
+            <a href="#" class="quick-action-card" data-view="stock-form"><i class="fas fa-plus-circle"></i><span>Add New Product</span></a>
+            <a href="cart.html" class="quick-action-card"><i class="fas fa-shopping-cart"></i><span>View Cart</span></a>
+            <a href="#" class="quick-action-card" id="delete-stock-btn"><i class="fas fa-trash-alt"></i><span>Delete Stock</span></a>
+            <a href="shop.html" class="quick-action-card"><i class="fas fa-store"></i><span>Visit Store</span></a>
+          </div>
+
+          <!-- Low Stock Alerts -->
+          <div class="section-header">
+            <h3 class="section-title"><i class="icon-fa-alert-red"></i> Low Stock Alerts</h3>
+            <a href="#" class="section-link" data-view="stock">View all</a>
+          </div>
+          <div class="alert-table" id="low-stock-table"></div>
+        </div>
+
+        <!--  STOCK LIST VIEW  -->
+        <div id="adm-stock" class="adm-view hidden-btn">
+          <div class="notification-bar" id="notification-bar">
+            <i class="fas fa-check-circle"></i><span id="notification-msg"></span>
+          </div>
+          <div class="admin-search-bar">
+            <input type="text" id="search-input" placeholder="Search by name or brand..." aria-label="Search products">
+            <select id="category-filter">
+              <option value="">All Categories</option>
+              <option>Laptops &amp; PCs</option>
+              <option>Smartphones</option>
+              <option>Audio</option>
+              <option>Wearables</option>
+              <option>Cameras</option>
+            </select>
+          </div>
+          <div class="table-wrapper">
+            <div id="stock-table-container"></div>
+            <div class="pagination" id="pagination-bar"></div>
+          </div>
+        </div>
+
+        <!--  STOCK FORM VIEW  -->
+        <div id="adm-stock-form" class="adm-view hidden-btn">
+          <div class="form-card">
+            <div class="error-banner" id="not-found-banner">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Product not found. <a href="#" data-view="stock">Back to stock list</a></span>
+            </div>
+            <form id="stock-form" novalidate>
+              <div class="form-grid">
+                <div class="form-field full-width">
+                  <label for="f-name">Product Name <span class="required-star">*</span></label>
+                  <input type="text" id="f-name" placeholder="e.g. Apple MacBook Pro 14" required>
+                  <div class="field-error" id="f-name-error"></div>
+                </div>
+                <div class="form-field">
+                  <label for="f-category">Category <span class="required-star">*</span></label>
+                  <select id="f-category">
+                    <option value="">Select category...</option>
+                    <option>Laptops &amp; PCs</option>
+                    <option>Smartphones</option>
+                    <option>Audio</option>
+                    <option>Wearables</option>
+                    <option>Cameras</option>
+                  </select>
+                  <div class="field-error" id="f-category-error"></div>
+                </div>
+                <div class="form-field">
+                  <label for="f-brand">Brand <span class="required-star">*</span></label>
+                  <input type="text" id="f-brand" placeholder="e.g. Apple" required>
+                  <div class="field-error" id="f-brand-error"></div>
+                </div>
+                <div class="form-field">
+                  <label for="f-price">Price ($) <span class="required-star">*</span></label>
+                  <input type="number" id="f-price" placeholder="0.00" min="0" step="0.01">
+                  <div class="field-error" id="f-price-error"></div>
+                </div>
+                <div class="form-field">
+                  <label for="f-stock">Stock Quantity <span class="required-star">*</span></label>
+                  <input type="number" id="f-stock" placeholder="0" min="0" step="1">
+                  <div class="field-error" id="f-stock-error"></div>
+                </div>
+                <div class="form-field">
+                  <label for="f-rating">Rating (0-5)</label>
+                  <input type="number" id="f-rating" placeholder="4.5" min="0" max="5" step="0.1">
+                  <div class="field-error" id="f-rating-error"></div>
+                </div>
+                <div class="form-field full-width">
+                  <label for="f-image">Image Path</label>
+                  <input type="text" id="f-image" placeholder="e.g. ../sources/laptops/Product1.jpg">
+                </div>
+                <div class="form-field full-width">
+                  <div class="checkbox-row">
+                    <input type="checkbox" id="f-available" checked>
+                    <label for="f-available">Available for purchase</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn lg-button"><i class="fas fa-save"></i> Save Product</button>
+                <a href="#" class="btn-outline-lg" data-view="stock"><i class="fas fa-times"></i> Cancel</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!--  CART VIEW  -->
+        <div id="adm-cart" class="adm-view hidden-btn">
+          <div class="read-only-badge"><i class="fas fa-eye"></i> Read-only � customer cart snapshot</div>
+          <div id="cart-content"></div>
+        </div>
+
+      </div><!-- /admin-content -->
+    </div><!-- /admin-main -->
+  </div><!-- /admin-wrap -->
+</div><!-- /view-admin -->
+
+<!-- Delete Stock Modal -->
+<div id="delete-modal" class="delete-modal-overlay">
+  <div class="delete-modal-backdrop" id="delete-modal-backdrop"></div>
+  <div class="delete-modal-box">
+    <div class="delete-modal-header">
+      <div class="delete-modal-icon-wrap">
+        <i class="icon-fa-trash-modal"></i>
+      </div>
+      <div>
+        <h3 class="delete-modal-title">Delete Products</h3>
+        <p class="delete-modal-subtitle">Select products to permanently remove from inventory.</p>
+      </div>
+    </div>
+    <div class="delete-modal-search-wrap">
+      <input type="text" id="delete-modal-search" placeholder="Search products..." class="delete-modal-search">
+    </div>
+    <div id="delete-modal-list" class="delete-modal-list"></div>
+    <div class="delete-modal-footer">
+      <span id="delete-modal-count" class="delete-modal-count">0 selected</span>
+      <div class="delete-modal-actions">
+        <button id="delete-modal-cancel" class="delete-modal-cancel-btn">Cancel</button>
+        <button id="delete-modal-confirm" class="delete-modal-confirm-btn" disabled>Delete Selected</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
